@@ -9,15 +9,15 @@ ifeq ($(OS),Windows_NT)
 	PIP = $(VENV_DIR)\Scripts\pip.exe
 else
 	ACTIVATE = source $(VENV_DIR)/bin/activate
-	PYTHON = $(VENV_DIR)/bin/python
-	PIP = $(VENV_DIR)/bin/pip
+	PYTHON = $(VENV_DIR)/bin/python3
+	PIP = $(VENV_DIR)/bin/pip3
 endif
 
 # ----------- COMMANDS -----------
 
 # Создание виртуального окружения
 venv:
-	python -m venv $(VENV_DIR)
+	python3 -m venv $(VENV_DIR)
 	@echo "✅ Virtual environment created in $(VENV_DIR)"
 
 # Установка зависимостей
